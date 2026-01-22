@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = Number(prompt("Nhập số lượng cần nguyên tố cần in"));
+    let count = 0;
+    let number = 2;
+    let i;
+    let prime;
+    let text = ""
+    while (count < input) {
+        prime = true;
+        for (i = 2; i < number; i++) {
+            if (number % i === 0) {
+                prime = false;
+                break;
+            }
+        }
+        if (prime === true) {
+            count++;
+            text += number + " ";
+
+        }
+        number++;
+    }
+    document.write(text);
+</script>
+</body>
+</html>
